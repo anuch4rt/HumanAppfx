@@ -69,7 +69,7 @@ public class HelloController {
         String extraValueStr = extraField.getText().trim();
 
         if (id.isEmpty() || name.isEmpty() || lastname.isEmpty() || extraValueStr.isEmpty()) {
-            resultLabel.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #e74c3c;");
+            resultLabel.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #dc2626;");
             resultLabel.setText("กรุณากรอกข้อมูลให้ครบถ้วน");
             return;
         }
@@ -78,7 +78,7 @@ public class HelloController {
         try {
             extraValue = Integer.parseInt(extraValueStr);
         } catch (NumberFormatException e) {
-            resultLabel.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #e74c3c;");
+            resultLabel.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #dc2626;");
             resultLabel.setText("ช่อง " + extraLabel.getText().replace(":", "") + " ต้องเป็นตัวเลขเท่านั้น");
             return;
         }
@@ -103,7 +103,7 @@ public class HelloController {
 
         displayArea.appendText(recordOutput);
 
-        resultLabel.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #27ae60;");
+        resultLabel.setStyle("-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #0284c7;");
         resultLabel.setText("บันทึกข้อมูลสำเร็จ (" + selectedType + ")");
 
         clearFields();
